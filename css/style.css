@@ -1059,12 +1059,10 @@ html {
   .third-page__photos {
     width: 300px;
   }
-  .bold {
-    font-size: 18px;
-  }
 
   .example {
      width: 85px
+     height: 110px
   }
   .footer {
     padding: 10px 10px 0 10px;
