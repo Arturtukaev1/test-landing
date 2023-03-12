@@ -1062,6 +1062,10 @@ html {
   .bold {
     font-size: 18px;
   }
+
+  .example {
+     width: 85px
+  }
   .footer {
     padding: 10px 10px 0 10px;
   }
