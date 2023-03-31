@@ -1,0 +1,773 @@
+@import "normalizez.scss"
+@import "resets.scss"
+
+$color-light: rgb(222, 239, 231)
+$color-dark: rgb(112, 76, 46)
+
+*
+    box-sizing: border-box
+
+@font-face 
+    font-family: "KiwiMaru"
+    src: url(../fonts/KiwiMaru-Regular.ttf)
+    font-weight: regular
+    font-style: normal
+
+@font-face 
+    font-family: "KiwiMaru"
+    src: url(../fonts/KiwiMaru-Medium.ttf)
+    font-weight: bold
+    font-style: normal
+
+@font-face 
+    font-family: "Charm"
+    src: url(../fonts/Charm-Regular.ttf)
+    font-weight: regular
+    font-style: normal
+
+@font-face 
+    font-family: "Charm"
+    src: url(../fonts/Charm-Bold.ttf)
+    font-weight: bold
+    font-style: normal
+
+
+html
+    font-family: "KiwiMaru"
+    font-weight: regular
+    scroll-behavior: smooth
+
+
+body
+    display: none
+
+.fone
+    z-index: 0
+    min-height: 100%
+    min-width: 640px
+    width: 100%
+    height: auto
+    position: fixed
+    top: 0
+    left: 0
+
+.main-container
+    position: relative
+    max-width: 1140px
+    margin: 0 auto
+    z-index: 5
+
+
+.main-page
+    max-height: 668px
+    overflow: hidden
+    position: relative
+    &__video
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__header
+        margin-bottom: 15px
+        font-size: 55px
+    &__text
+        margin-bottom: 25px
+    &__contain
+        position: absolute
+        z-index: 4
+        right: 2%
+        font-size: 25px
+        width: 35%
+        top: 30%
+        color: white
+    &__line
+        right: 44%
+
+.nav-menu
+    z-index: 100
+    position: absolute
+    width: 100%
+    top: 3%
+    &__name
+        margin-left: 26px
+        font-size: 30px
+
+.nav
+    margin-top: 3px
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+.bold
+    font-family: "KiwiMaru"
+    font-weight: bold
+
+.text-dec
+    color: white
+    cursor: pointer
+    text-decoration: none
+    border: 3px solid
+    border-image: linear-gradient(90deg, rgba(214,242,229,0.7) 20%, rgba(77,54,35,0.7) 70%) 8
+    -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0) var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat, conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0) 0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat, linear-gradient(#000 0 0) padding-box no-repeat
+    transition: .3s, -webkit-mask-position .3s .3s
+    font-size: 26px
+    &:hover
+        --_i: 100%
+        color: $color-light
+        transition: .3s, -webkit-mask-size .3s .3s
+
+.items
+    display: flex
+    height: 100%
+    margin-right: 50px
+    &__nav-item
+        margin-right: 32px
+        white-space: nowrap
+        &:last-child
+            margin-right: 0
+
+.line
+    border: 1px solid black
+    background-color: black
+    position: absolute
+    height: 100%
+
+.common-btn
+    width: 200px
+    height: 70px
+    color: $color-light
+    border-color: $color-light
+    &:hover
+        background: $color-light
+        color: $color-dark
+        border-color: $color-dark
+
+.first-btn
+    width: 200px
+    height: 70px
+
+.overlay
+    z-index: 2
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: black
+    opacity: 0.5
+
+.second-page
+    display: flex
+    justify-content: space-around
+    align-items: center
+    z-index: -1
+    height: 670px
+    position: relative
+    overflow: hidden
+    &__right-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        z-index: 4
+        width: 450px
+        height: 550px
+    &__undertext
+        font-size: 26px
+
+
+.contain
+    padding: 10px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: stretch
+    z-index: 4
+    height: 45%
+    font-size: 25px
+    width: 45%
+    &__header
+        z-index: 6
+        font-size: 45px
+        margin-bottom: 30px
+    &__text
+        z-index: 6
+
+
+.carousel
+    margin: 10px
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 50%)
+    z-index: 5
+    width: 350px
+    z-index: 5
+
+.third-page
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    z-index: 10
+    position: relative
+    min-height: 540px
+    margin-bottom: 10px
+
+.photos
+    position: relative
+    padding: 10px
+    border-radius: 10px
+    height: 500px
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    z-index: 9
+    margin-right: 15px
+    gap: 10px
+
+.container
+    padding: 10px
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__header
+        margin-bottom: 20px
+        font-size: 25px
+    &__text
+        margin-bottom: 20px
+        font-size: 20px
+
+.example
+    transition: 0.3s ease-out
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 50%)
+    &__photo
+        cursor: pointer
+        transition: 0.6s ease
+        height: 100%
+        width: 100%
+        background-size: cover
+        &:hover
+            opacity: 70%
+
+.popup
+    position: absolute
+    height:100%
+    width:100%
+    top:0
+    left:0
+    display: none
+    text-align: center
+
+.popup_bg
+    background: #000000
+    opacity: 0.5
+    position: fixed
+    z-index: 12
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: auto
+    height: auto
+
+.popup_img 
+    position: fixed
+    z-index:13
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    max-height: 90%
+
+.popup_img 
+    pointer-events: none
+
+.rewies
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 8
+    position: relative
+    width: 100%
+    height: 200px
+
+.feedback
+    z-index: 8
+    width: 45%
+    top: 15%
+    font-size: 15px
+    font-family: "Charm"
+    font-weight: regular
+    margin-left: 15px
+    padding: 10px
+    margin-bottom: 40px
+    &__text
+        margin-bottom: 15px
+    &__header
+        font-size: 17px
+        font-family: "Charm"
+        font-weight: bold
+
+.second-btn
+    color: $color-dark
+    background: $color-light
+
+.footer
+    max-height: 300px
+    position: relative
+    display: flex
+    justify-content: space-around
+    align-items: flex-end
+    z-index: 30
+    overflow: hidden
+    color: $color-light
+    &__text
+        width: 30%
+        height: 100%
+    &__header
+        font-size: 40px
+        margin-bottom: 15px
+    &__btn
+        width: 75%
+        margin-bottom: 10px
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 5px
+    &__left-side
+        display: flex
+        padding: 10px
+        max-height: 300px
+        background: $color-light
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 50%)
+        border-radius: 15px
+    &__photo
+        margin: 10px 10px 0 10px
+        max-width: auto
+        max-height: 250px
+
+.box
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    &__name
+        font-size: 35px
+        color: $color-dark
+    &__text
+        padding: 4px
+        width: 60%
+        font-size: 15px
+        color: $color-dark
+        cursor: pointer
+        text-decoration: none
+        border: 4px solid
+        border-image: linear-gradient(90deg, $color-dark 20%, rgba(34, 117, 206, 0.7) 70%) 8
+        -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0) var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat, conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0) 0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat, linear-gradient(#000 0 0) padding-box no-repeat
+        transition: .3s, -webkit-mask-position .3s .3s
+        &:hover
+            --_i: 100%
+            color: $color-dark
+            transition: .3s, -webkit-mask-size .3s .3s
+    &__link
+        display: flex
+        flex-direction: column
+    &__icon
+        cursor: pointer
+        transition: 0.7s ease
+        width: 60px
+        height: auto
+        border-radius: 5px
+        margin-right: 2px
+        &:hover
+            border-radius: 20px
+            background: $color-dark
+            box-shadow: 0px 4px 4px rgb(0 0 0 / 50%)
+
+.input
+    width: 75%
+    color: $color-dark
+    margin-bottom: 10px
+
+.block
+    background: $color-dark
+    color: $color-light
+    border-radius: 15px
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 50%)
+    transition: 0.6s ease
+    &:hover
+        background: $color-light
+        color: $color-dark
+
+/*Gallery---------------------------------------------------------
+
+.cover-nav
+    display: flex
+    z-index: 999
+    position: fixed
+    background-color: #000
+    width: 100%
+    height: 45px
+    overflow: hidden
+    opacity: 0.65
+
+.gallery
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    min-height: 810px
+    &__about
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        width: 400px
+        height: 200px
+        padding: 15px
+        margin-bottom: 22px
+        font-size: 22px
+    &__main
+        display: flex
+        justify-content: space-around
+        padding: 15px
+        font-size: 26px
+    &__photo
+        width: 65%
+        height: auto
+        margin-bottom: 15px
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 50%)
+    &__contain
+        display: flex
+        flex-direction: column
+        align-items: center
+
+.second-gallery
+    padding: 10px
+    max-height: 800px
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    justify-items: center
+    gap: 10px
+    &__photo
+        width: 200px
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 50%)
+        height: auto
+        margin-bottom: 2px
+    &__name
+        font-size: 22px
+
+.set
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.about
+    &__text
+        margin-bottom: 10px
+    &__header
+        margin-bottom: 10px
+
+/*Contact-page-------------------------------------------------------
+
+.contact
+    position: absolute
+    top: 100px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    max-height: 600px
+    &__descp
+        font-size: 24px
+    &__header
+        font-size: 26px
+        text-decoration: none
+        border: 4px solid
+        border-image: linear-gradient(90deg, $color-dark 20%, rgba(34, 117, 206, 0.7) 70%) 8
+        -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0) var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat, conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0) 0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat, linear-gradient(#000 0 0) padding-box no-repeat
+        transition: .3s, -webkit-mask-position .3s .3s
+        &:hover
+            --_i: 100%
+            color: $color-dark
+            transition: .3s, -webkit-mask-size .3s .3s
+    &__about
+        padding: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        width: 100%
+        height: 200px
+        margin-bottom: 40px
+    &__text
+        width: 60%
+    &__link
+        display: flex
+        flex-direction: row
+        justify-content: space-evenly
+
+.message
+    height: 70px
+
+
+
+
+
+
+.social-media
+    position: absolute
+    top: 700px
+    width: 20%
+    &__text
+        color: $color-dark
+        cursor: pointer
+
+
+
+@media (max-width: 1199px)
+
+    .main-page
+        &__contain
+            font-size: 20px
+
+    .photos
+        height: 400px
+        width: 100%
+
+@media (max-width: 991px)
+
+    .main-page
+        &__contain
+            font-size: 16px
+
+    .btn-lg
+        width: 150px
+        height: 52px
+        font-size: 16px
+
+    .nav-items
+        font-size: 12px
+        opacity: 97%
+        transition: 1s all
+        position: absolute
+        top: 0
+        right: -100%
+        height: 10%
+        width: 35%
+        z-index: 20
+        &__list
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            height: 100%
+        &__list-item
+            margin-right: 0
+            font-size: 20px
+
+    .text-dec
+        font-size: 18px
+
+    .bold 
+        font-size: 22px
+
+    .hamburger
+        z-index: 999
+        cursor: pointer
+        width: 30px
+        position: absolute
+        top: 15px
+        right: 15px
+        height: 15px
+        span
+            height: 2px
+            width: 100%
+            display: block
+            background: $color-light
+            margin-bottom: 4px
+            transition: 1s all
+            &:last-child
+                margin-bottom: 0
+    .hamburger_active
+        z-index: 30
+        span
+            margin-bottom: -2px
+            &:nth-child(1)
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .nav-items_active
+        right: 40px
+        top: 12px
+
+    .second-page
+        max-height: 420px
+        &__contain
+            padding: 12px
+            font-size: 18px
+            height: 50%
+            width: 40%
+        &__right-wrapper
+            width: 300px
+            height: 350px
+
+    .head-text
+        margin-bottom: 8px
+
+    .slide
+        width: 220px
+
+    .third-page
+        min-height: 400px
+        &__container
+            width: 490px
+            margin: 10px
+        &__photos
+            width: 550px
+            height: 90%
+
+    .feedback
+        margin-bottom: 20px
+
+    .footer
+        &__left-side
+            width: 200px
+        &__text
+            width: 400px
+        &__photo
+            display: none
+
+    .box
+        &__name
+            display: none
+        &__link
+            flex-direction: row
+
+    .second-gallery
+        max-height: 1005px
+        grid-template-columns: repeat(3, 1fr)
+
+    .social-media
+        top:600px
+
+@media (max-width: 767px)
+
+    .main-page
+        &__text
+            margin-bottom: 10px
+            font-size: 14px
+
+    .items
+        margin-right: 0
+        &__nav-item
+            margin-right: 15px
+            font-size: 12px
+
+    .btn-lg
+        width: 140px
+        height: 54px
+        font-size: 16px
+
+    .hamburger
+        z-index: 30
+        top: 20px
+        right: 10px
+
+    .nav-items_active
+        right: 40%
+
+    .text
+        font-size: 14px
+
+    .bold
+        font-size: 20px
+    .text-dec
+        font-size: 20px
+
+    .second-page
+        min-height: 570px
+        flex-direction: column
+        &__contain
+            height: 25%
+            width: 70%
+
+    .photos
+        display: none
+
+    .third-page
+        min-height: 210px
+        flex-direction: column
+        &__container
+            margin-bottom: 30px
+
+    .rewies
+        height: 165px
+
+    .common-btn
+        width: 120px
+        height: 40px
+        font-size: 14px
+
+    .footer
+        &__text
+            width: 320px
+            padding-top: 6px
+
+    .line
+        display: none
+
+
+@media (max-width: 575px)
+
+    .main-page
+        &__video
+            width: 150%
+        &__contain
+            top: 20%
+        &__text
+            font-size: 13px
+
+    .bold
+        font-size: 18px
+
+    .photos
+        margin-right: 0px
+
+    .container
+        width: 330px
+
+    .bold
+        font-size: 18px
+
+    .footer
+        padding: 10px 10px 0 10px
+        &__left-side
+            margin-right: 10px
+            width: 150px
+
+    .gallery
+        min-height: 560px
+        &__photo
+            width: 90%
+        &__about
+            width: 345px
+            height: 150px
+
+    .about
+        &__text
+            font-size: 16px
+
+    .second-gallery
+        max-height: 1210px
+        grid-template-columns: repeat(2, 1fr)
+        &__photo
+            width: 170px
+
+
+
+    .contact
+        &__descp
+            font-size: 20px
+        &__text
+            width: 80%
