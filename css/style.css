@@ -647,6 +647,8 @@ body {
 
 .popup {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   display: none;
@@ -1247,7 +1249,12 @@ body {
   }
   .set {
     width: 170px;
+  }  
+  .popup {
+    width: 60%;
+    heigth: auto;
   }
+  
   .contact__descp {
     font-size: 18px;
   }
