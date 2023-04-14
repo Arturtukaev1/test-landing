@@ -1235,10 +1235,7 @@ body {
   .gallery {
     min-height: 345px;
   }
-  .popup_img {
-     width: 80%;
-     height: auto;
-  }
+
   .gallery__photo {
     width: 90%;
   }
